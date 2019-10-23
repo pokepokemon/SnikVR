@@ -1,5 +1,5 @@
 // Made with Amplify Shader Editor
-// Available at the Unity Asset Store - http://u3d.as/y3X 
+// Available at the Unity Asset Store - http://u3d.as/y3X
 Shader "WorldMatFree"
 {
 	Properties
@@ -16,7 +16,7 @@ Shader "WorldMatFree"
 		_HeightDisplacement("Height Displacement", Range( 0 , 1)) = 0
 		_AO("AO", 2D) = "white" {}
 		_EdgeLength ( "Edge length", Range( 2, 50 ) ) = 15
-		_Tile("Tile", Range( 1 , 10)) = 1
+		_Tile("Tile", Range( 1 , 50)) = 1
 		[HideInInspector] _texcoord( "", 2D ) = "white" {}
 		[HideInInspector] __dirty( "", Int ) = 1
 	}
@@ -29,7 +29,7 @@ Shader "WorldMatFree"
 		#include "UnityStandardUtils.cginc"
 		#include "Tessellation.cginc"
 		#pragma target 4.6
-		#pragma surface surf Standard keepalpha addshadow fullforwardshadows vertex:vertexDataFunc tessellate:tessFunction 
+		#pragma surface surf Standard keepalpha addshadow fullforwardshadows vertex:vertexDataFunc tessellate:tessFunction
 		struct Input
 		{
 			float2 uv_texcoord;
