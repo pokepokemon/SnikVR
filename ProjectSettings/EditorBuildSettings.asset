@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/snik.unity
     guid: 50fb17f3559a848ecba73185fdd303d0
+  - enabled: 0
+    path: Assets/Scenes/1.unity
+    guid: 1c50144598d534bdc87ae28c093f829a
   m_configObjects: {}
