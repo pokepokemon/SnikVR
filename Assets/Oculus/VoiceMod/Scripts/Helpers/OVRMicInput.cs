@@ -4,16 +4,16 @@ Content     :   Interface to microphone input
 Created     :   May 12, 2015
 Copyright   :   Copyright 2015 Oculus VR, Inc. All Rights reserved.
 
-Licensed under the Oculus VR Rift SDK License Version 3.1 (the "License"); 
-you may not use the Oculus VR Rift SDK except in compliance with the License, 
-which is provided at the time of installation or download, or which 
+Licensed under the Oculus VR Rift SDK License Version 3.1 (the "License");
+you may not use the Oculus VR Rift SDK except in compliance with the License,
+which is provided at the time of installation or download, or which
 otherwise accompanies this software in either electronic or hard copy form.
 
 You may obtain a copy of the License at
 
-http://www.oculusvr.com/licenses/LICENSE-3.1 
+http://www.oculusvr.com/licenses/LICENSE-3.1
 
-Unless required by applicable law or agreed to in writing, the Oculus VR SDK 
+Unless required by applicable law or agreed to in writing, the Oculus VR SDK
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
@@ -24,9 +24,9 @@ using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
 
-public class OVRMicInput : MonoBehaviour 
+public class OVRMicInput : MonoBehaviour
 {
-	public enum micActivation 
+	public enum micActivation
 	{
 		HoldToSpeak,
 		PushToSpeak,
@@ -64,7 +64,7 @@ public class OVRMicInput : MonoBehaviour
 
 	public micActivation micControl;
 
-	public string selectedDevice; 
+	public string selectedDevice;
 
 	public float loudness; // Use this to chenge visual values. Range is 0 - 100
 
@@ -72,7 +72,7 @@ public class OVRMicInput : MonoBehaviour
 	private bool micSelected = false;
 	private int minFreq, maxFreq;
 	private bool focused = true;
-	
+
 	//----------------------------------------------------
 	// MONOBEHAVIOUR OVERRIDE FUNCTIONS
 	//----------------------------------------------------
@@ -91,10 +91,11 @@ public class OVRMicInput : MonoBehaviour
 	/// <summary>
 	/// Start this instance.
 	/// </summary>
-	void Start() 
+	void Start()
 	{
+		#if !UNITY_WEBGL
 		audioSource.loop = true; 	// Set the AudioClip to loop
-		audioSource.mute = false; 	
+		audioSource.mute = false;
 
 		if(Microphone.devices.Length!= 0)
 		{
@@ -102,39 +103,41 @@ public class OVRMicInput : MonoBehaviour
 			micSelected = true;
 			GetMicCaps();
 		}
+#endif
 	}
 
 	/// <summary>
 	/// Update this instance.
 	/// </summary>
-	void Update() 
+	void Update()
 	{
+		#if !UNITY_WEBGL
 		if (!focused)
 			StopMicrophone();
-		
-		if (!Application.isPlaying) 
+
+		if (!Application.isPlaying)
 			StopMicrophone();
-		
+
 		audioSource.volume = (sourceVolume / 100);
 		loudness = Mathf.Clamp(GetAveragedVolume() * sensitivity * (sourceVolume / 10), 0, 100);
-		
+
 		//Hold To Speak
-		if (micControl == micActivation.HoldToSpeak) 
+		if (micControl == micActivation.HoldToSpeak)
 		{
 			if (Microphone.IsRecording(selectedDevice) && Input.GetKey(KeyCode.Space) == false)
 				StopMicrophone();
-			
+
 			if (Input.GetKeyDown(KeyCode.Space)) //Push to talk
 				StartMicrophone();
-			
+
 			if (Input.GetKeyUp(KeyCode.Space))
 				StopMicrophone();
 		}
-		
+
 		//Push To Talk
-		if (micControl == micActivation.PushToSpeak) 
+		if (micControl == micActivation.PushToSpeak)
 		{
-			if (Input.GetKeyDown(KeyCode.Space)) 
+			if (Input.GetKeyDown(KeyCode.Space))
 			{
 				if (Microphone.IsRecording(selectedDevice))
 					StopMicrophone();
@@ -142,37 +145,40 @@ public class OVRMicInput : MonoBehaviour
 					StartMicrophone();
 			}
 		}
-		
+
 		//Constant Speak
 		if (micControl == micActivation.ConstantSpeak)
 			if (!Microphone.IsRecording(selectedDevice))
 				StartMicrophone();
-		
-		
+
+
 		//Mic Slected = False
 		if (Input.GetKeyDown(KeyCode.M))
 			micSelected = false;
+		#endif
 	}
-	
-	
+
+
 	/// <summary>
 	/// Raises the application focus event.
 	/// </summary>
 	/// <param name="focus">If set to <c>true</c> focus.</param>
-	void OnApplicationFocus(bool focus) 
+	void OnApplicationFocus(bool focus)
 	{
+		#if !UNITY_WEBGL
 		focused = focus;
 
 		// fixes app with a delayed buffer if going out of focus
 		if (!focused)
 			StopMicrophone();
+#endif
 	}
-	
+
 	/// <summary>
 	/// Raises the application pause event.
 	/// </summary>
 	/// <param name="focus">If set to <c>true</c> focus.</param>
-	void OnApplicationPause(bool focus) 
+	void OnApplicationPause(bool focus)
 	{
 		focused = focus;
 
@@ -189,7 +195,7 @@ public class OVRMicInput : MonoBehaviour
 	/// <summary>
 	/// Raises the GU event.
 	/// </summary>
-	void OnGUI() 
+	void OnGUI()
 	{
 		MicDeviceGUI((Screen.width/2)-150, (Screen.height/2)-75, 300, 50, 10, -300);
 	}
@@ -207,15 +213,16 @@ public class OVRMicInput : MonoBehaviour
 	/// <param name="height">Height.</param>
 	/// <param name="buttonSpaceTop">Button space top.</param>
 	/// <param name="buttonSpaceLeft">Button space left.</param>
-	public void MicDeviceGUI (float left, float top, float width, float height, float buttonSpaceTop, float buttonSpaceLeft) 
+	public void MicDeviceGUI (float left, float top, float width, float height, float buttonSpaceTop, float buttonSpaceLeft)
 	{
+		#if !UNITY_WEBGL
 		//If there is more than one device, choose one.
 		if (Microphone.devices.Length >= 1 && GuiSelectDevice == true && micSelected == false)
 		{
 			for (int i = 0; i < Microphone.devices.Length; ++i)
 			{
-				if (GUI.Button(new Rect(left + ((width + buttonSpaceLeft) * i), top + ((height + buttonSpaceTop) * i), width, height), 
-				               Microphone.devices[i].ToString())) 
+				if (GUI.Button(new Rect(left + ((width + buttonSpaceLeft) * i), top + ((height + buttonSpaceTop) * i), width, height),
+				               Microphone.devices[i].ToString()))
 				{
 					StopMicrophone();
 					selectedDevice = Microphone.devices[i].ToString();
@@ -225,13 +232,15 @@ public class OVRMicInput : MonoBehaviour
 				}
 			}
 		}
+		#endif
 	}
 
 	/// <summary>
 	/// Gets the mic caps.
 	/// </summary>
-	public void GetMicCaps () 
+	public void GetMicCaps ()
 	{
+	 #if !UNITY_WEBGL
 		if(micSelected == false) return;
 
 		//Gets the frequency of the device
@@ -243,18 +252,20 @@ public class OVRMicInput : MonoBehaviour
 			minFreq = 44100;
 			maxFreq = 44100;
 		}
-	
+
 		if (micFrequency > maxFreq)
 			micFrequency = maxFreq;
+#endif
 	}
 
 	/// <summary>
 	/// Starts the microphone.
 	/// </summary>
-	public void StartMicrophone () 
+	public void StartMicrophone ()
 	{
+		#if !UNITY_WEBGL
 		if(micSelected == false) return;
-			
+
 		//Starts recording
 		audioSource.clip = Microphone.Start(selectedDevice, true, 1, micFrequency);
 
@@ -263,13 +274,15 @@ public class OVRMicInput : MonoBehaviour
 
 		// Play the audio source
 		audioSource.Play();
+#endif
 	}
 
 	/// <summary>
 	/// Stops the microphone.
 	/// </summary>
-	public void StopMicrophone () 
+	public void StopMicrophone ()
 	{
+		#if !UNITY_WEBGL
 		if(micSelected == false) return;
 
 		// Overriden with a clip to play? Don't stop the audio source
@@ -277,7 +290,8 @@ public class OVRMicInput : MonoBehaviour
 			audioSource.Stop();
 
 		Microphone.End(selectedDevice);
-	}    
+#endif
+	}
 
 
 	//----------------------------------------------------
@@ -288,7 +302,7 @@ public class OVRMicInput : MonoBehaviour
 	/// Gets the averaged volume.
 	/// </summary>
 	/// <returns>The averaged volume.</returns>
-	float GetAveragedVolume() 
+	float GetAveragedVolume()
 	{
 		// We will use the SR to get average volume
 		// return OVRSpeechRec.GetAverageVolume();

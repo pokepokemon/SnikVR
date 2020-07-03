@@ -40,7 +40,7 @@ public class OVRLipSyncMicInput : MonoBehaviour
 
     // PUBLIC MEMBERS
     [Tooltip("Manual specification of Audio Source - " +
-        "by default will use any attached to the same object.")]
+             "by default will use any attached to the same object.")]
     public AudioSource audioSource = null;
 
 
@@ -64,10 +64,10 @@ public class OVRLipSyncMicInput : MonoBehaviour
     }
 
     [Tooltip("Microphone input control method. Hold To Speak and Push" +
-        " To Speak are driven with the Mic Activation Key.")]
+             " To Speak are driven with the Mic Activation Key.")]
     public micActivation micControl = micActivation.ConstantSpeak;
     [Tooltip("Key used to drive Hold To Speak and Push To Speak methods" +
-        " of microphone input control.")]
+             " of microphone input control.")]
     public KeyCode micActivationKey = KeyCode.Space;
 
     [Tooltip("Will contain the string name of the selected microphone device - read only.")]
@@ -99,10 +99,13 @@ public class OVRLipSyncMicInput : MonoBehaviour
     /// </summary>
     void Start()
     {
+#if !UNITY_WEBGL
+
         audioSource.loop = true;     // Set the AudioClip to loop
         audioSource.mute = false;
 
         InitializeMicrophone();
+#endif
     }
 
     /// <summary>
@@ -110,6 +113,7 @@ public class OVRLipSyncMicInput : MonoBehaviour
     /// </summary>
     private void InitializeMicrophone()
     {
+        #if !UNITY_WEBGL
         if (initialized)
         {
             return;
@@ -122,6 +126,7 @@ public class OVRLipSyncMicInput : MonoBehaviour
         micSelected = true;
         GetMicCaps();
         initialized = true;
+#endif
     }
 
 
@@ -130,6 +135,7 @@ public class OVRLipSyncMicInput : MonoBehaviour
     /// </summary>
     void Update()
     {
+        #if !UNITY_WEBGL
         if (!focused)
         {
             if (Microphone.IsRecording(selectedDevice))
@@ -206,6 +212,7 @@ public class OVRLipSyncMicInput : MonoBehaviour
                 micSelected = false;
             }
         }
+        #endif
     }
 
 
@@ -260,6 +267,7 @@ public class OVRLipSyncMicInput : MonoBehaviour
     /// <param name="buttonSpaceTop">Button space top.</param>
     /// <param name="buttonSpaceLeft">Button space left.</param>
     public void MicDeviceGUI(
+
         float left,
         float top,
         float width,
@@ -267,14 +275,15 @@ public class OVRLipSyncMicInput : MonoBehaviour
         float buttonSpaceTop,
         float buttonSpaceLeft)
     {
+        #if !UNITY_WEBGL
         //If there is more than one device, choose one.
         if (Microphone.devices.Length >= 1 && enableMicSelectionGUI == true && micSelected == false)
         {
             for (int i = 0; i < Microphone.devices.Length; ++i)
             {
                 if (GUI.Button(new Rect(left + ((width + buttonSpaceLeft) * i),
-                                        top + ((height + buttonSpaceTop) * i), width, height),
-                               Microphone.devices[i].ToString()))
+                        top + ((height + buttonSpaceTop) * i), width, height),
+                    Microphone.devices[i].ToString()))
                 {
                     StopMicrophone();
                     selectedDevice = Microphone.devices[i].ToString();
@@ -284,6 +293,7 @@ public class OVRLipSyncMicInput : MonoBehaviour
                 }
             }
         }
+#endif
     }
 
     /// <summary>
@@ -291,6 +301,7 @@ public class OVRLipSyncMicInput : MonoBehaviour
     /// </summary>
     public void GetMicCaps()
     {
+        #if !UNITY_WEBGL
         if (micSelected == false) return;
 
         //Gets the frequency of the device
@@ -305,6 +316,7 @@ public class OVRLipSyncMicInput : MonoBehaviour
 
         if (micFrequency > maxFreq)
             micFrequency = maxFreq;
+#endif
     }
 
     /// <summary>
@@ -312,6 +324,7 @@ public class OVRLipSyncMicInput : MonoBehaviour
     /// </summary>
     public void StartMicrophone()
     {
+        #if !UNITY_WEBGL
         if (micSelected == false) return;
 
         //Starts recording
@@ -330,13 +343,15 @@ public class OVRLipSyncMicInput : MonoBehaviour
         }
         // Play the audio source
         audioSource.Play();
-    }
+    #endif
+}
 
     /// <summary>
     /// Stops the microphone.
     /// </summary>
     public void StopMicrophone()
     {
+        #if !UNITY_WEBGL
         if (micSelected == false) return;
 
         // Overriden with a clip to play? Don't stop the audio source
@@ -352,6 +367,7 @@ public class OVRLipSyncMicInput : MonoBehaviour
         context.ResetContext();
 
         Microphone.End(selectedDevice);
+#endif
     }
 
 
