@@ -117,7 +117,6 @@ public class OvrAvatar : MonoBehaviour
     // Avatar asset
     private HashSet<UInt64> assetLoadingIds = new HashSet<UInt64>();
     private bool assetsFinishedLoading = false;
-    private int renderPartCount = 0;
 
     // Material manager
     private OvrAvatarMaterialManager materialManager;
@@ -703,7 +702,7 @@ public class OvrAvatar : MonoBehaviour
                 catch (Exception e)
                 {
                     assetsFinishedLoading = true;
-                    throw; // rethrow the original exception to preserve callstack
+                    throw e; // rethrow the original exception to preserve callstack
                 }
 #if AVATAR_INTERNAL
                 AssetsDoneLoading.Invoke();
@@ -884,14 +883,14 @@ public class OvrAvatar : MonoBehaviour
                     ovrRenderPart = AddSkinnedMeshRenderPBSComponent(renderPartObject, CAPI.ovrAvatarRenderPart_GetSkinnedMeshRenderPBS(renderPart));
                     break;
                 case ovrAvatarRenderPartType.SkinnedMeshRenderPBS_V2:
-                {
-                    ovrRenderPart = AddSkinnedMeshRenderPBSV2Component(
-                        renderPart,
-                        renderPartObject,
-                        CAPI.ovrAvatarRenderPart_GetSkinnedMeshRenderPBSV2(renderPart),
-                        isBody && renderPartIndex == 0,
-                        isLeftController || isReftController);
-                }
+                    {
+                        ovrRenderPart = AddSkinnedMeshRenderPBSV2Component(
+                            renderPart,
+                            renderPartObject,
+                            CAPI.ovrAvatarRenderPart_GetSkinnedMeshRenderPBSV2(renderPart),
+                            isBody && renderPartIndex == 0,
+                            isLeftController || isReftController);
+                    }
                     break;
                 default:
                     break;
@@ -1016,7 +1015,6 @@ public class OvrAvatar : MonoBehaviour
 
     bool IsValidMic()
     {
-        #if !UNITY_WEBGL
         string[] devices = Microphone.devices;
 
         if (devices.Length < 1)
@@ -1025,7 +1023,16 @@ public class OvrAvatar : MonoBehaviour
         }
 
         int selectedDeviceIndex = 0;
-        selectedDeviceIndex = checkForSelectedIndexDevice(devices);
+#if UNITY_STANDALONE_WIN
+        for (int i = 1; i < devices.Length; i++)
+        {
+            if (devices[i].ToUpper().Contains("RIFT"))
+            {
+                selectedDeviceIndex = i;
+                break;
+            }
+        }
+#endif
 
         string selectedDevice = devices[selectedDeviceIndex];
 
@@ -1046,23 +1053,6 @@ public class OvrAvatar : MonoBehaviour
 
         Microphone.End(selectedDevice);
         return true;
-#endif
-        return false;
-    }
-
-    private int checkForSelectedIndexDevice(string[] devices)
-    {
-#if UNITY_STANDALONE_WIN
-        for (int i = 1; i < devices.Length; i++)
-        {
-            if (devices[i].ToUpper().Contains("RIFT"))
-            {
-                return i;
-                break;
-            }
-        }
-#endif
-        return 0;
     }
 
     void InitPostLoad()
@@ -1091,21 +1081,21 @@ public class OvrAvatar : MonoBehaviour
     }
 
     static ovrAvatarLights ovrLights = new ovrAvatarLights();
-    static void ExpressiveGlobalInit()
-    {
-        if (doneExpressiveGlobalInit)
-        {
-            return;
-        }
+	static void ExpressiveGlobalInit()
+	{
+		if (doneExpressiveGlobalInit)
+		{
+			return;
+		}
 
-        doneExpressiveGlobalInit = true;
+		doneExpressiveGlobalInit = true;
 
         // This array size has to match the 'MarshalAs' attribute in the ovrAvatarLights declaration.
         const int MAXSIZE = 16;
         ovrLights.lights = new ovrAvatarLight[MAXSIZE];
 
         InitializeLights();
-    }
+	}
 
     static void InitializeLights()
     {
@@ -1123,20 +1113,20 @@ public class OvrAvatar : MonoBehaviour
                 switch (sceneLight.type)
                 {
                     case LightType.Directional:
-                    {
-                        CreateLightDirectional(instanceID, sceneLight.transform.forward, sceneLight.intensity, ref ovrLights.lights[i]);
-                        break;
-                    }
+                        {
+                            CreateLightDirectional(instanceID, sceneLight.transform.forward, sceneLight.intensity, ref ovrLights.lights[i]);
+                            break;
+                        }
                     case LightType.Point:
-                    {
-                        CreateLightPoint(instanceID, sceneLight.transform.position, sceneLight.range, sceneLight.intensity, ref ovrLights.lights[i]);
-                        break;
-                    }
+                        {
+                            CreateLightPoint(instanceID, sceneLight.transform.position, sceneLight.range, sceneLight.intensity, ref ovrLights.lights[i]);
+                            break;
+                        }
                     case LightType.Spot:
-                    {
-                        CreateLightSpot(instanceID, sceneLight.transform.position, sceneLight.transform.forward, sceneLight.spotAngle, sceneLight.range, sceneLight.intensity, ref ovrLights.lights[i]);
-                        break;
-                    }
+                        {
+                            CreateLightSpot(instanceID, sceneLight.transform.position, sceneLight.transform.forward, sceneLight.spotAngle, sceneLight.range, sceneLight.intensity, ref ovrLights.lights[i]);
+                            break;
+                        }
                 }
             }
         }
@@ -1310,17 +1300,17 @@ public class OvrAvatar : MonoBehaviour
 
     public void UpdateVoiceData(short[] pcmData, int numChannels)
     {
-        if (lipsyncContext != null && micInput == null)
-        {
-            lipsyncContext.ProcessAudioSamplesRaw(pcmData, numChannels);
-        }
+      if (lipsyncContext != null && micInput == null)
+      {
+          lipsyncContext.ProcessAudioSamplesRaw(pcmData, numChannels);
+      }
     }
     public void UpdateVoiceData(float[] pcmData, int numChannels)
     {
-        if (lipsyncContext != null && micInput == null)
-        {
-            lipsyncContext.ProcessAudioSamplesRaw(pcmData, numChannels);
-        }
+      if (lipsyncContext != null && micInput == null)
+      {
+          lipsyncContext.ProcessAudioSamplesRaw(pcmData, numChannels);
+      }
     }
 
 

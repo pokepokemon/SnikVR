@@ -1,0 +1,1266 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d41887b1546f5c44ab54e7e65aad3bc, type: 3}
+  m_Name: test
+  m_EditorClassIdentifier: 
+  version: 3252
+  resultType: 0
+  materialsAndUVRects:
+  - material: {fileID: 2100000, guid: 9cd391edc2e3ce74ba1c253ba08ed632, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.00012207031
+      y: 0.00012207031
+      width: 0.25
+      height: 0.25
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: 1e05ab7c2c0aa4136893c60df32fc3e3, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.2503662
+      y: 0.75109863
+      width: 0.125
+      height: 0.125
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 2
+      height: 2
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 2
+      height: 2
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: 44cd72d128ee06142a03b2ca80904bd1, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.50061035
+      y: 0.2503662
+      width: 0.25
+      height: 0.25
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: -3713557480702596758, guid: a6984eabf4a2b4d2e9d34c8685562efb,
+      type: 3}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.9388428
+      y: 0.00012207031
+      width: 0.00024414062
+      height: 0.00024414062
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: c596bfcb852f44ce7b934a868babc5bd, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.9388428
+      y: 0.00012207031
+      width: 0.00024414062
+      height: 0.00024414062
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: 2ae45b2d10123c147a980bdab2522fbf, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.9388428
+      y: 0.00012207031
+      width: 0.00024414062
+      height: 0.00024414062
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: -8212680083840791456, guid: a6984eabf4a2b4d2e9d34c8685562efb,
+      type: 3}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.9388428
+      y: 0.00012207031
+      width: 0.00024414062
+      height: 0.00024414062
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 4578439172989161426, guid: a6984eabf4a2b4d2e9d34c8685562efb,
+      type: 3}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.9388428
+      y: 0.00012207031
+      width: 0.00024414062
+      height: 0.00024414062
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 4872108141399753925, guid: a6984eabf4a2b4d2e9d34c8685562efb,
+      type: 3}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.9388428
+      y: 0.00012207031
+      width: 0.00024414062
+      height: 0.00024414062
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 4516667625416280519, guid: a6984eabf4a2b4d2e9d34c8685562efb,
+      type: 3}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.9388428
+      y: 0.00012207031
+      width: 0.00024414062
+      height: 0.00024414062
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: 21603045126797146a217bc37c535389, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.9388428
+      y: 0.00012207031
+      width: 0.00024414062
+      height: 0.00024414062
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 816848578903272807, guid: a6984eabf4a2b4d2e9d34c8685562efb,
+      type: 3}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.9388428
+      y: 0.00012207031
+      width: 0.00024414062
+      height: 0.00024414062
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2656247854119235572, guid: a6984eabf4a2b4d2e9d34c8685562efb,
+      type: 3}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.9388428
+      y: 0.00012207031
+      width: 0.00024414062
+      height: 0.00024414062
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: -897671940454526109, guid: a6984eabf4a2b4d2e9d34c8685562efb,
+      type: 3}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.9388428
+      y: 0.00012207031
+      width: 0.00024414062
+      height: 0.00024414062
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: ccbfec300195446dc83b05d2ab90e2ef, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.9388428
+      y: 0.00012207031
+      width: 0.00024414062
+      height: 0.00024414062
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 4142163513837670044, guid: a6984eabf4a2b4d2e9d34c8685562efb,
+      type: 3}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.9388428
+      y: 0.00012207031
+      width: 0.00024414062
+      height: 0.00024414062
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: bebf4eb5d39738d43aa4a9c023e7bf56, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.9388428
+      y: 0.00012207031
+      width: 0.00024414062
+      height: 0.00024414062
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 8556262120643298411, guid: a6984eabf4a2b4d2e9d34c8685562efb,
+      type: 3}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.9388428
+      y: 0.00012207031
+      width: 0.00024414062
+      height: 0.00024414062
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 6610793029855579450, guid: a6984eabf4a2b4d2e9d34c8685562efb,
+      type: 3}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.9388428
+      y: 0.00012207031
+      width: 0.00024414062
+      height: 0.00024414062
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 7214052883377083977, guid: a6984eabf4a2b4d2e9d34c8685562efb,
+      type: 3}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.9388428
+      y: 0.00012207031
+      width: 0.00024414062
+      height: 0.00024414062
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: 027402f8b958f7543ad2437b595c1319, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.7513428
+      y: 0.50061035
+      width: 0.125
+      height: 0.125
+    srcObjName: garasje
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 2
+      height: 2
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 3
+      height: 3
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: a7995a8dda3ca48e6beae8848322115b, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.7513428
+      y: 0.50061035
+      width: 0.125
+      height: 0.125
+    srcObjName: 0. bakke
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 3
+      height: 3
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 3
+      height: 3
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: d132fd74fa2d26c4e989672f98dd9239, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.00012207031
+      y: 0.50061035
+      width: 0.25
+      height: 0.25
+    srcObjName: garasje
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: a8d53bf7d419ac647b87ee5204b6a152, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.7508545
+      y: 0.00012207031
+      width: 0.125
+      height: 0.125
+    srcObjName: garasje
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 5
+      height: 5
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 5
+      height: 5
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: f3b41cb7f3dd0fd448bc686479518d4f, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.00012207031
+      y: 0.7508545
+      width: 0.125
+      height: 0.125
+    srcObjName: garasje
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 10
+      height: 10
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 10
+      height: 10
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: 9b4962b444665334da4882e35c8afa49, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.00012207031
+      y: 0.2503662
+      width: 0.25
+      height: 0.25
+    srcObjName: nabohus1
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: -5396234901987582864, guid: a6984eabf4a2b4d2e9d34c8685562efb,
+      type: 3}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.87609863
+      y: 0.00012207031
+      width: 0.0625
+      height: 0.0625
+    srcObjName: nabohus1.003
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1.5
+      height: 1.5
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: 96b80ff20d892224b811256aba76d2da, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.87609863
+      y: 0.00012207031
+      width: 0.0625
+      height: 0.0625
+    srcObjName: garasje
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1.5
+      height: 1.5
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1.5
+      height: 1.5
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: 08f39bb295d0a4f7383e1501686b93df, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.5008545
+      y: 0.6258545
+      width: 0.125
+      height: 0.125
+    srcObjName: 1. etasje
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 7
+      height: 7
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 7
+      height: 7
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: 4a033d2dace89401baeb8186a6c2dc22, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.50061035
+      y: 0.00012207031
+      width: 0.25
+      height: 0.25
+    srcObjName: 1. etasje
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: 3952b97ab891ee74f82af8aef6c07f3c, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.2503662
+      y: 0.50061035
+      width: 0.125
+      height: 0.125
+    srcObjName: 1. etasje
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 2
+      height: 2
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 2
+      height: 2
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: 82dfe73e27069f14ea4bb670e051256d, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.2503662
+      y: 0.6258545
+      width: 0.125
+      height: 0.125
+    srcObjName: 1. etasje tak
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0.5
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0.5
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: 7d5a0f4f21b3638489c99a88ace620d7, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.2503662
+      y: 0.00012207031
+      width: 0.25
+      height: 0.25
+    srcObjName: 1. etasje tak
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: 45e6095a8ef5d442c884c7467fff0488, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.37561035
+      y: 0.50061035
+      width: 0.125
+      height: 0.125
+    srcObjName: pais_nede
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0.6
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0.6
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: fbb51bf8e7785354c8380ab3b710d3be, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.37561035
+      y: 0.6258545
+      width: 0.125
+      height: 0.125
+    srcObjName: 2. etasje
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 5
+      height: 5
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 5
+      height: 5
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: 10cdbd2866964884b817d3c98fad56a1, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.37561035
+      y: 0.75109863
+      width: 0.125
+      height: 0.125
+    srcObjName: 2. etasje
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 3
+      height: 3
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 3
+      height: 3
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: c362c8bd5acb632458be156097414b67, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.5008545
+      y: 0.50061035
+      width: 0.125
+      height: 0.125
+    srcObjName: 2. etasje
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0.8
+      height: 0.8
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0.8
+      height: 0.8
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: e67e43e0050f37747a0b160bfdae3e44, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.62609863
+      y: 0.50061035
+      width: 0.125
+      height: 0.125
+    srcObjName: 2. etasje
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 2
+      height: 2
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 2
+      height: 2
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: 0770bd9fe8e9c3a4fa8484e5120c0dae, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.7508545
+      y: 0.2503662
+      width: 0.125
+      height: 0.125
+    srcObjName: 2. etasje
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 2
+      height: 2
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 2
+      height: 2
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: 7eded48511997e44d88132d008dc8fe2, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.7508545
+      y: 0.2503662
+      width: 0.125
+      height: 0.125
+    srcObjName: 2. etasje
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 2
+      height: 2
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 2
+      height: 2
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  - material: {fileID: 2100000, guid: 0d95f117385e2ac4cbed25fb2c834770, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.2503662
+      y: 0.2503662
+      width: 0.25
+      height: 0.25
+    srcObjName: kitchen
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 0
+  resultMaterials:
+  - combinedMaterial: {fileID: 2100000, guid: 177766f87b1b64dbfb8569c46517cdb9, type: 2}
+    considerMeshUVs: 0
+    sourceMaterials:
+    - {fileID: 2100000, guid: 9cd391edc2e3ce74ba1c253ba08ed632, type: 2}
+    - {fileID: 2100000, guid: 1e05ab7c2c0aa4136893c60df32fc3e3, type: 2}
+    - {fileID: 2100000, guid: 44cd72d128ee06142a03b2ca80904bd1, type: 2}
+    - {fileID: -3713557480702596758, guid: a6984eabf4a2b4d2e9d34c8685562efb, type: 3}
+    - {fileID: 2100000, guid: c596bfcb852f44ce7b934a868babc5bd, type: 2}
+    - {fileID: 2100000, guid: 2ae45b2d10123c147a980bdab2522fbf, type: 2}
+    - {fileID: -8212680083840791456, guid: a6984eabf4a2b4d2e9d34c8685562efb, type: 3}
+    - {fileID: 4578439172989161426, guid: a6984eabf4a2b4d2e9d34c8685562efb, type: 3}
+    - {fileID: 4872108141399753925, guid: a6984eabf4a2b4d2e9d34c8685562efb, type: 3}
+    - {fileID: 4516667625416280519, guid: a6984eabf4a2b4d2e9d34c8685562efb, type: 3}
+    - {fileID: 2100000, guid: 21603045126797146a217bc37c535389, type: 2}
+    - {fileID: 816848578903272807, guid: a6984eabf4a2b4d2e9d34c8685562efb, type: 3}
+    - {fileID: 2656247854119235572, guid: a6984eabf4a2b4d2e9d34c8685562efb, type: 3}
+    - {fileID: -897671940454526109, guid: a6984eabf4a2b4d2e9d34c8685562efb, type: 3}
+    - {fileID: 2100000, guid: ccbfec300195446dc83b05d2ab90e2ef, type: 2}
+    - {fileID: 4142163513837670044, guid: a6984eabf4a2b4d2e9d34c8685562efb, type: 3}
+    - {fileID: 2100000, guid: bebf4eb5d39738d43aa4a9c023e7bf56, type: 2}
+    - {fileID: 8556262120643298411, guid: a6984eabf4a2b4d2e9d34c8685562efb, type: 3}
+    - {fileID: 6610793029855579450, guid: a6984eabf4a2b4d2e9d34c8685562efb, type: 3}
+    - {fileID: 7214052883377083977, guid: a6984eabf4a2b4d2e9d34c8685562efb, type: 3}
+    - {fileID: 2100000, guid: 027402f8b958f7543ad2437b595c1319, type: 2}
+    - {fileID: 2100000, guid: a7995a8dda3ca48e6beae8848322115b, type: 2}
+    - {fileID: 2100000, guid: d132fd74fa2d26c4e989672f98dd9239, type: 2}
+    - {fileID: 2100000, guid: a8d53bf7d419ac647b87ee5204b6a152, type: 2}
+    - {fileID: 2100000, guid: f3b41cb7f3dd0fd448bc686479518d4f, type: 2}
+    - {fileID: 2100000, guid: 9b4962b444665334da4882e35c8afa49, type: 2}
+    - {fileID: -5396234901987582864, guid: a6984eabf4a2b4d2e9d34c8685562efb, type: 3}
+    - {fileID: 2100000, guid: 96b80ff20d892224b811256aba76d2da, type: 2}
+    - {fileID: 2100000, guid: 08f39bb295d0a4f7383e1501686b93df, type: 2}
+    - {fileID: 2100000, guid: 4a033d2dace89401baeb8186a6c2dc22, type: 2}
+    - {fileID: 2100000, guid: 3952b97ab891ee74f82af8aef6c07f3c, type: 2}
+    - {fileID: 2100000, guid: 82dfe73e27069f14ea4bb670e051256d, type: 2}
+    - {fileID: 2100000, guid: 7d5a0f4f21b3638489c99a88ace620d7, type: 2}
+    - {fileID: 2100000, guid: 45e6095a8ef5d442c884c7467fff0488, type: 2}
+    - {fileID: 2100000, guid: fbb51bf8e7785354c8380ab3b710d3be, type: 2}
+    - {fileID: 2100000, guid: 10cdbd2866964884b817d3c98fad56a1, type: 2}
+    - {fileID: 2100000, guid: c362c8bd5acb632458be156097414b67, type: 2}
+    - {fileID: 2100000, guid: e67e43e0050f37747a0b160bfdae3e44, type: 2}
+    - {fileID: 2100000, guid: 0770bd9fe8e9c3a4fa8484e5120c0dae, type: 2}
+    - {fileID: 2100000, guid: 7eded48511997e44d88132d008dc8fe2, type: 2}
+    - {fileID: 2100000, guid: 0d95f117385e2ac4cbed25fb2c834770, type: 2}
+  resultMaterialsTexArray: []
+  doMultiMaterial: 0

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class FPSCounter : MonoBehaviour
 {
-     public Text fpsText;
+     public TextMeshPro fpsText;
      public float deltaTime;
 
      void Update () {
