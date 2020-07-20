@@ -28,13 +28,13 @@ public class CharacterVrMovementProvider : MonoBehaviour
     {
         // Get the head in local, playspace ground
         float headHeight = Mathf.Clamp(head.transform.localPosition.y, 1, 2);
-        characterController.height = headHeight;
+        //characterController.height = headHeight;
 
         // Cut in half, add skin
         Vector3 newCenter = Vector3.zero;
 
-        newCenter.y = characterController.height / 1f;
-        newCenter.y += characterController.skinWidth;
+        //newCenter.y = characterController.height / 1f;
+        //newCenter.y += characterController.skinWidth;
 
         // Let's move the capsule in local space as well
         newCenter.x = head.transform.localPosition.x;
